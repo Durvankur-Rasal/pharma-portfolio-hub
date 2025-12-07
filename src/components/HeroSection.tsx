@@ -29,9 +29,22 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 pt-20">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center">
+          {/* Profile Photo */}
+          <div className="mb-8 animate-fade-up">
+            <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-1 shadow-glow">
+              <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face" 
+                  alt="Rushikesh Wable"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full shadow-soft mb-8 animate-fade-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-card/80 backdrop-blur-sm rounded-full shadow-soft mb-8 animate-fade-up" style={{ animationDelay: "0.05s" }}>
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
             <span className="text-sm font-medium text-muted-foreground">
               Medical Coder & Certified Pharmacist
