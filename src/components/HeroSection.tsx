@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Linkedin, Mail, FlaskConical, Pill, Heart, Activity } from "lucide-react";
+import { ArrowDown, Linkedin, Mail, FlaskConical, Pill, Heart, Activity, FileText, BookOpen } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -56,13 +56,35 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-up" style={{ animationDelay: "0.4s" }}>
             <Button variant="hero" size="xl" asChild>
               <a href="#projects">View My Work</a>
             </Button>
             <Button variant="hero-outline" size="xl" asChild>
               <a href="#contact">Contact Me</a>
             </Button>
+          </div>
+
+          {/* Resume & Pamphlet Links */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fade-up" style={{ animationDelay: "0.45s" }}>
+            <a
+              href="https://drive.google.com/file/d/11QKqVqIvGV3I0LgezI97zt2fMZuj4Bpw/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-card/80 backdrop-blur-sm rounded-full shadow-soft hover:shadow-glow hover:bg-card transition-all duration-300 hover:scale-105 text-foreground font-medium"
+            >
+              <FileText className="w-5 h-5 text-primary" />
+              <span>My Resume</span>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1biVVqJAxsCbKjUAcOIuC6xJv-r7JjY9H/view?usp=drivesdk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-card/80 backdrop-blur-sm rounded-full shadow-soft hover:shadow-glow hover:bg-card transition-all duration-300 hover:scale-105 text-foreground font-medium"
+            >
+              <BookOpen className="w-5 h-5 text-accent" />
+              <span>Agency Pamphlet</span>
+            </a>
           </div>
 
           {/* Social Links */}
