@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Linkedin, Mail, FlaskConical, Pill, Heart, Activity, FileText, BookOpen } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const HeroSection = () => {
   return (
@@ -35,9 +36,9 @@ const HeroSection = () => {
             <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-1 shadow-glow">
               <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
                 <img 
-                  src="https://drive.google.com/uc?export=view&id=1aVXUvtjJJARpacnIz0c2VydtE_A0jDYg" 
+                  src={profilePhoto} 
                   alt="Rushikesh Wable"
-                  className="w-full h-full object-cover object-top rounded-full"
+                  className="w-full h-full object-cover object-center rounded-full"
                 />
               </div>
             </div>
