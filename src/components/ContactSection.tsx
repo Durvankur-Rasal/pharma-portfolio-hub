@@ -1,44 +1,6 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { Mail, User, MessageSquare, Stethoscope, FlaskConical, Pill, Send, Linkedin } from "lucide-react";
+import { Mail, Stethoscope, FlaskConical, Pill, Linkedin } from "lucide-react";
 
 const ContactSection = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
-
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
   return (
     <section id="contact" className="py-20 md:py-32 bg-card relative overflow-hidden">
       {/* Decorative Elements */}
@@ -63,10 +25,10 @@ const ContactSection = () => {
           <div className="w-20 h-1 bg-primary mx-auto rounded-full mt-4" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 max-w-5xl mx-auto">
+        <div className="max-w-xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div>
+            <div className="text-center">
               <h3 className="font-display text-2xl font-bold text-foreground mb-4">
                 Contact Information
               </h3>
@@ -110,8 +72,8 @@ const ContactSection = () => {
             </div>
 
             {/* Decorative Card */}
-            <div className="p-6 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl">
-              <div className="flex items-center gap-3 mb-3">
+            <div className="p-6 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl text-center">
+              <div className="flex items-center justify-center gap-3 mb-3">
                 <Pill className="w-6 h-6 text-primary" />
                 <span className="font-display font-semibold text-foreground">
                   Pharma Write Pro
@@ -121,85 +83,6 @@ const ContactSection = () => {
                 Helping pharmacy and healthcare students with research, review, thesis, and career guidance.
               </p>
             </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-background rounded-3xl shadow-soft p-6 md:p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium text-foreground">
-                  Your Name
-                </label>
-                <div className="relative">
-                  <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="John Doe"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="pl-12 h-12 rounded-xl border-border focus:border-primary"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-foreground">
-                  Email Address
-                </label>
-                <div className="relative">
-                  <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="john@example.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="pl-12 h-12 rounded-xl border-border focus:border-primary"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label htmlFor="message" className="text-sm font-medium text-foreground">
-                  Your Message
-                </label>
-                <div className="relative">
-                  <MessageSquare className="absolute left-4 top-4 w-5 h-5 text-muted-foreground" />
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="How can I help you?"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="pl-12 pt-3 rounded-xl border-border focus:border-primary resize-none"
-                  />
-                </div>
-              </div>
-
-              <Button
-                type="submit"
-                variant="hero"
-                size="lg"
-                className="w-full"
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  "Sending..."
-                ) : (
-                  <>
-                    Send Message
-                    <Send className="w-4 h-4 ml-2" />
-                  </>
-                )}
-              </Button>
-            </form>
           </div>
         </div>
       </div>
