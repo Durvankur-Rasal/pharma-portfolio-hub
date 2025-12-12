@@ -30,7 +30,7 @@ const ExperienceSection = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="font-display text-2xl font-bold text-foreground mb-2">
-                    Pharmacy Internship
+                    Medical Coding Internship
                   </h3>
                   <div className="flex flex-wrap items-center gap-4 text-muted-foreground">
                     <span className="flex items-center gap-2">

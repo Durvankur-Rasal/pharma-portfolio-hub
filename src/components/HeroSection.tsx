@@ -35,9 +35,9 @@ const HeroSection = () => {
             <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-1 shadow-glow">
               <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=face" 
+                  src="https://drive.google.com/uc?export=view&id=1aVXUvtjJJARpacnIz0c2VydtE_A0jDYg" 
                   alt="Rushikesh Wable"
-                  className="w-full h-full object-cover rounded-full"
+                  className="w-full h-full object-cover object-top rounded-full"
                 />
               </div>
             </div>
