@@ -33,15 +33,8 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a href="#home" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-              <Pill className="w-5 h-5 text-primary" />
-            </div>
-            <span className="font-display font-bold text-lg text-foreground">
-              RW<span className="text-primary">.</span>
-            </span>
-          </a>
+          {/* Spacer for layout balance */}
+          <div className="w-10" />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
